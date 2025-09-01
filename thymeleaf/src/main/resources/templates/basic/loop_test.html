@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>1.공유된 객체 출력</h2>
+    <div th:text="${member}"></div>
+    <div th:text="${member.id}"></div>
+    <div th:text="${member.pwd}"></div>
+    <div th:text="${member.name}"></div>
+    <div th:text="${member.age}"></div>
+
+    <h2>2.공유된 list 객체에서 vo 하나씩 출력</h2>
+    <table border="1">
+        <tr>
+            <td>아이디</td>
+            <td>비번</td>
+            <td>이름</td>
+        </tr>
+        <tr th:each="m:${list}">
+            <td th:text="${m.id}"></td>
+            <td th:text="${m.pwd}"></td>
+            <td th:Text="${m.name}"></td>
+        </tr>
+    </table>
+
+    <h3>3.조건에 따라 값출력</h3>
+    <table border="1">
+        <tr>
+            <td>아이디</td>
+            <td>비번</td>
+            <td>이름</td>
+            <td>성인여부</td>
+        </tr>
+        <tr th:each="m:${list}">
+            <td th:text="${m.id}"></td>
+            <td th:text="${m.pwd}"></td>
+            <td th:Text="${m.name}"></td>
+            <td th:text="${m.age >= 20 ? '성인' : '미성년자'}"></td>
+        </tr>
+    </table>
+
+</body>
+</html>

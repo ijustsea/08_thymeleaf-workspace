@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2><a th:href="@{/th/text}">th:text 테스트링크</a></h2>
+    <h2><a th:href="@{/th/checked}">th:checked 테스트링크</a></h2>
+    <hr>
+    <!--체크박스 예제-->
+    <form>
+        <input type="checkbox" name="agree" value="yes" th:checked="${isChecked}">동의함
+    </form>
+
+</body>
+</html>

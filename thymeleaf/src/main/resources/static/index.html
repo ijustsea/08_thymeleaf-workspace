@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns:tn="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>1.타임리프(Thymeleaf)</h1>
+
+    <p>
+        스피링부트에서 HTML랜더링 시 사용 하는 템플릿 엔진 <br>
+        컨트롤러에서 넘겨준 데이터를 HTML에 "바인딩"할 수 있는것이 특징.<br>
+        JSP를 대체하는 현대적인 방법 <br>
+    </p>
+
+    <h3>2.타임리프 시작 필수셋팅</h3>
+    <ol>
+        <li>타임리프 디펜던시 : build.gradle or pom.xml</li>
+        <!--implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'-->
+        <li>템플릿 파일 위치 설정 : resources/template 폴더에 .html 파일저장할것.</li>
+        <li>HTML 파일에 타임리프 네임스페이스 선언 : HTML은 기본적으로 타임리프속성 몰라서</li>
+    </ol>
+
+    <h3>thymeleaf의 기본</h3>
+    <h2><a href="th/text">타임리프 text 속성</a></h2>
+    <h2><a href="th/opr">타임리프 연산자</a></h2>
+    <h2><a href="th/form">타임리프 form 태그로 요청</a></h2>
+    <h2><a href="th/if">타임리프 조건판단</a></h2>
+    <h2><a href="th/loop">타임리프 반복문(공유객체)</a></h2>
+    <h2><a href="th/href">th:href & th:checked</a></h2>
+
+    <h3>3.타임리프 레이아웃</h3>
+    <p>
+        타임리프에서 레이아웃 기능은 아주 중요함<br>
+        반복되는 공통구조(헤더, 푸터)를 한번 정의하고<br>
+        각 페이지에서 재사용 할수 있게 해준다.<br>
+        Thymeleaf Layout Dialect dependency
+    </p>
+
+    <h2><a href="layout/fragmentTest">Fragment Test</a></h2>
+    <h2><a href="layout/layout1">Layout Test1</a></h2>
+    <h2><a href="layout/layout2">Layout Test2</a></h2>
+</body>
+</html>

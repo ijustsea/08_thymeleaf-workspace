@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://wwww.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleafe/layout" >
+      <!--메인 레이아웃 역할 하는곳에 기술-->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--시멘틱태그 : div동일한 기능이지만 명시적으로 구분하기 우해 -->
+    <header>
+        <!--th:block : 논리적 컨테이너(안보임)
+            타임리프 로직을 묶을 때 사용한다.-->
+        <th:block th:replace="common/header :: header"></th:block>
+    </header>
+    <main>
+        <th:block layout:fragment="content">
+            <!--이자리는 content 조각이 올거라는 뜻!-->
+        </th:block>
+    </main>
+    <footer>
+        this is footer bar
+    </footer>
+
+
+</body>
+</html>
